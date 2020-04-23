@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+form{
+    background: black;
+    padding: 20px;
+    width: 50%;
+}
+label{
+    position: relative;
+    display: block;
+    margin: 10px 0;
+}
+label input{
+    visibility: hidden;
+}
+span{
+    color: #ffffff8f;
+    cursor: pointer;
+}
+label span::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+}
+label span::after{
+    position: absolute;
+    content: "";
+    display: none;
+    left: 5px;
+    top: 0px;
+    width: 6px;
+    height: 10px;
+    border: solid #3353ea;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #3353ea;
+}
+input:checked ~ span::after{
+    display: block;
+}
+span:hover::before{
+    box-shadow: 0 0 10px #ffffff,
+                0 0 20px #ffffff,
+                0 0 40px #ffffff;
+}
